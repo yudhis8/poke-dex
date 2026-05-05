@@ -27,11 +27,11 @@ import type {
 } from "@/app/types/pokemon";
 import { MAX_COMPARE } from "@/app/constants/pokemon";
 
-interface PageProps {
+interface PokemonDetailClientProps {
   params: Promise<{ id: string }>;
 }
 
-export default function PokemonDetailClient({ params }: PageProps) {
+export default function PokemonDetailClient({ params }: PokemonDetailClientProps) {
   const { id } = use(params);
   const router = useRouter();
   const { addToCompare, removeFromCompare, isInCompare, compareList } =
